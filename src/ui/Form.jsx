@@ -23,3 +23,5 @@ const Form = styled.form`
 `;
 
 export default Form;
+
+console.log(Form);
