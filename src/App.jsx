@@ -14,20 +14,30 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <Row type="horizontal">
-          <Heading as="h1">wild oasis</Heading>
-          <div>
-            <Heading as="h2">Check in and out</Heading>
-            <Button onClick={() => alert("check in")}>check in</Button>
-            <Button onClick={() => alert("check out")}>check in</Button>
-          </div>
-        </Row>
-        <Row type="vertical">
-          <Heading as="h3">Forms</Heading>
-          <form>
-            <Input type="number" placeholder="Number of Guest" />
-            <Input type="number" placeholder="Number of Guest" />
-          </form>
+        <Row>
+          <Row type="horizontal">
+            <Heading as="h1">wild oasis</Heading>
+            <div>
+              <Heading as="h2">Check in and out</Heading>
+              <Button onClick={() => alert("check in")}>check in</Button>
+              <Button
+                variation="secondary"
+                size="small"
+                onClick={() => alert("check out")}
+              >
+                check Out
+              </Button>
+            </div>
+          </Row>
+
+          <Row>
+            <Heading as="h3">Forms</Heading>
+            <form>
+              <Input type="number" placeholder="Number of Guest" />
+
+              <Input type="number" placeholder="Number of Guest" />
+            </form>
+          </Row>
         </Row>
       </StyledApp>
     </>
