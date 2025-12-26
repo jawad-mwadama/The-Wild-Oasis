@@ -10,6 +10,7 @@ export async function getCabins() {
 }
 
 export async function createCabin(newCabin) {
+  // 1. Create Cabin
   const { data, error } = await supabase
     .from("cabins")
     .insert([newCabin])
@@ -19,6 +20,8 @@ export async function createCabin(newCabin) {
     console.error(error);
     throw new Error("cabin could not be created");
   }
+
+  // 2.Upload image
   return data;
 }
 
