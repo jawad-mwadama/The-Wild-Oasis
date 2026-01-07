@@ -13,6 +13,7 @@ export function useEditCabin() {
     },
     onError: (err) => toast.error(err.message),
   });
+  console.log(err);
 
   return { editCabin, isEditing };
 }
